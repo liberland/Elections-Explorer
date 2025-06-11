@@ -1,0 +1,25 @@
+[package]
+name = "liberland-elections-explorer"
+description = "Simulate, analyze, and visualize electoral systems on the Liberland blockchain"
+version = "0.2.0"
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/liberland/Elections-Explorer"
+keywords = ["Liberland", "Blockchain", "Phragmen", "Elections"]
+
+[patch."https://github.com/paritytech/polkadot-sdk"]
+sp-npos-elections = { path = "patch/npos-elections" }
+
+[dependencies]
+actix-web = "4"
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive"] }
+hex = "0.4"
+serde = { version = "1", features = ["derive"] }
+sp-arithmetic = { git = "https://github.com/paritytech/polkadot-sdk", branch = "release-polkadot-v1.1.0" }
+sp-npos-elections = { git = "https://github.com/paritytech/polkadot-sdk", branch = "release-polkadot-v1.1.0" }
+subxt = "0.41.0"
+subxt-signer = "0.41.0"
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
