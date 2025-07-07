@@ -5,6 +5,7 @@ use clap::Parser;
 use serde::{Deserialize, Serialize};
 use sp_arithmetic::per_things::Perbill;
 use sp_npos_elections::{CandidatePtr, ElectionResult, PhragmenTrace};
+use subxt::utils::H256;
 use subxt::{Config, OnlineClient, SubstrateConfig};
 use tracing::{Level, event};
 

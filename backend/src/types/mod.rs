@@ -2,7 +2,7 @@ use super::*;
 
 pub mod api;
 
-pub type Hash = <SubstrateConfig as Config>::Hash;
+pub type Hash = H256;
 pub type AccountId = <SubstrateConfig as Config>::AccountId;
 
 /// Elections data downloaded from the chain
