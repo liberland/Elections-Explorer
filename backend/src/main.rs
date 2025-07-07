@@ -34,7 +34,7 @@ pub mod substrate {}
 #[command(version, about, long_about = None)]
 struct Args {
     /// The node to connect to
-    #[arg(short, long, default_value = "wss://mainnet.liberland.org")]
+    #[arg(short, long, default_value = "wss://liberland-rpc.dwellir.com")]
     url: String,
 
     /// Increase logging verbosity
