@@ -1,5 +1,5 @@
 FROM rust:1.85.1
-WORKDIR /usr/src/liberland-elections-explorer
+WORKDIR /usr/src/liberland-election-explorer
 
 COPY Cargo.toml Cargo.lock .
 COPY artifacts artifacts
@@ -10,4 +10,4 @@ EXPOSE 8080
 
 RUN cargo install --path .
 
-CMD ["liberland-elections-explorer", "-v"]
+CMD ["liberland-election-explorer", "-v"]

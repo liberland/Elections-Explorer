@@ -60,7 +60,7 @@
 </script>
 
 <svelte:head>
-  <title>Liberland Elections Explorer</title>
+  <title>Liberland Election Explorer</title>
 </svelte:head>
 
 <div class="container">
@@ -70,7 +70,7 @@
     </div>
   {/if}
   <div class="header">
-    <h1>Welcome to Liberland Elections Explorer</h1>
+    <h1>Welcome to Liberland Election Explorer</h1>
     <p>
       Understand how Council elections work on the Liberland blockchain through
       interactive visualizations of the algorithm.

@@ -658,12 +658,12 @@
 </script>
 
 <svelte:head>
-  <title>Liberland Elections Explorer</title>
+  <title>Liberland Election Explorer</title>
 </svelte:head>
 
 <div class="container">
   <div class="header">
-    <h1>Liberland Elections Explorer</h1>
+    <h1>Liberland Election Explorer</h1>
     <p class="subtitle">
       Council Election at Block: <span class="block-hash"
         >{electionData.blockHash}</span

@@ -1,11 +1,11 @@
 [package]
-name = "liberland-elections-explorer"
+name = "liberland-election-explorer"
 description = "Simulate, analyze, and visualize electoral systems on the Liberland blockchain"
 version = "0.2.0"
 edition = "2024"
 license = "MIT"
-repository = "https://github.com/liberland/Elections-Explorer"
-keywords = ["Liberland", "Blockchain", "Phragmen", "Elections"]
+repository = "https://github.com/liberland/Election-Explorer"
+keywords = ["Liberland", "Blockchain", "Phragmen", "Election"]
 
 [patch."https://github.com/paritytech/polkadot-sdk"]
 sp-npos-elections = { path = "patch/npos-elections" }

@@ -7,7 +7,7 @@ export const load: PageServerLoad = async ({ params }) => {
   const { block_hash } = params;
 
   // Fetch election data from the backend
-  const backendHost = dev ? "localhost:8080" : "liberland-elections-explorer:8080";
+  const backendHost = dev ? "localhost:8080" : "liberland-election-explorer:8080";
   const response = await fetch(`http://${backendHost}/council/elections/${block_hash}`);
 
   // Check if the request was successful
