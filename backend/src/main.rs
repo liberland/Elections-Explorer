@@ -68,7 +68,6 @@ async fn main() -> std::io::Result<()> {
             .service(council_elections_latest)
             .service(council_elections_at_blockhash)
     })
-    .workers(3)
     .bind(("0.0.0.0", 8080))?
     .run()
     .await
