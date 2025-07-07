@@ -18,7 +18,7 @@ hex = "0.4"
 serde = { version = "1", features = ["derive"] }
 sp-arithmetic = { git = "https://github.com/paritytech/polkadot-sdk", branch = "release-polkadot-v1.1.0" }
 sp-npos-elections = { git = "https://github.com/paritytech/polkadot-sdk", branch = "release-polkadot-v1.1.0" }
-subxt = "0.42.0"
+subxt = { version = "0.42.0", features = ["reconnecting-rpc-client"] }
 subxt-signer = "0.42.0"
 tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
 tracing = "0.1"

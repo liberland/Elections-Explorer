@@ -9,7 +9,16 @@ pub struct OnchainDataProvider<C: Config> {
 
 impl<C: Config> OnchainDataProvider<C> {
     pub async fn new(uri: &str) -> Result<Self> {
-        let api = OnlineClient::<C>::from_url(uri).await?;
+        // Create reconnecting RPC client
+        let rpc_retry_policy = ExponentialBackoff::from_millis(100)
+            .max_delay(Duration::from_secs(10))
+            .take(3);
+        let rpc_client = RpcClient::builder()
+            .retry_policy(rpc_retry_policy)
+            .build(uri)
+            .await?;
+
+        let api = OnlineClient::<C>::from_rpc_client(rpc_client).await?;
 
         Ok(Self { api })
     }
